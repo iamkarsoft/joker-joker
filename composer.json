@@ -1,0 +1,17 @@
+{
+    "name": "iamkarsoft/joker-joker",
+    "description": "Create random jokes",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kofi Ramos Amoussou",
+            "email": "karsoft92@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Iamkarsoft\\JokerJoker\\":"src/"
+        }
+    }
+}
