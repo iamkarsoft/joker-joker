@@ -16,4 +16,18 @@ class JokeFactoryTest extends TestCase {
 		$joke = $jokes->getRandomJoke();
 		$this->assertSame('This is a joke', $joke);
 	}
+
+	/**
+	 * @test
+	 */
+	public function it_returns_a_chuck_norris_joke() {
+		$chuckJokes = [
+			'Chuck Norris can strangle you with a cordless phone',
+			'Chuck Norris doesn’t wear a watch. He decides what time it is.',
+		];
+		$jokes = new JokeFactory();
+		$joke = $jokes->getRandomJoke();
+		$this->assertContains($joke, $chuckJokes);
+	}
+
 }
