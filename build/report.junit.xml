@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.218794">
+    <testsuite name="JokerJoker Test Suite" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.218794">
+      <testsuite name="Iamkarsoft\JokerJoker\Tests\JokeFactoryTest" file="C:\laragon\www\joker-joker\tests\JokeFactoryTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.218794">
+        <testcase name="it_returns_a_joke" class="Iamkarsoft\JokerJoker\Tests\JokeFactoryTest" classname="Iamkarsoft.JokerJoker.Tests.JokeFactoryTest" file="C:\laragon\www\joker-joker\tests\JokeFactoryTest.php" line="12" assertions="1" time="0.218794"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -8,10 +8,17 @@
             "email": "karsoft92@gmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "Iamkarsoft\\JokerJoker\\":"src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iamkarsoft\\JokerJoker\\Test\\":"tests"
+            }
+        },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }

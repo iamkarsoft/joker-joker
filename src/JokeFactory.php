@@ -2,9 +2,16 @@
 
 namespace Iamkarsoft\JokerJoker;
 class JokeFactory {
+	protected $jokes = [];
 
-	public function hello() {
+	public function __construct(array $jokes) {
+		$this->jokes = $jokes;
+	}
 
-		echo 'Chuck Norris Joke';
+	/**
+	 * getting random jokes
+	 */
+	public function getRandomJoke() {
+		return $this->jokes[array_rand($this->jokes)];
 	}
 }
