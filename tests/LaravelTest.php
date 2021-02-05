@@ -50,7 +50,13 @@ class LaravelTest extends TestCase {
 	 * @test
 	 */
 	public function the_route_can_be_accessed() {
+		JokerJoker::shouldReceive('getRandomJoke')
+			->once()
+			->andReturn('some joke');
+
 		$this->get('/jokes')
+			->assertViewIs('joker-joker::joke')
+			->assertViewHas('joke', 'some joke')
 			->assertStatus(200);
 
 	}
