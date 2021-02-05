@@ -1,23 +1,26 @@
 <?php
 
 namespace Iamkarsoft\JokerJoker;
+use GuzzleHttp\Client;
+
 class JokeFactory {
-	protected $jokes = [
-		'Chuck Norris can strangle you with a cordless phone',
-		'Chuck Norris doesn’t wear a watch. He decides what time it is.',
-	];
 
-	public function __construct(array $jokes = null) {
+	const API_ENDPOINT = 'http://api.icndb.com/jokes/random';
+	protected $client;
 
-		if ($jokes) {
-			$this->jokes = $jokes;
-		}
+	public function __construct(client $client = null) {
+		$this->client = $client ?: new client();
 	}
 
 	/**
 	 * getting random jokes
 	 */
 	public function getRandomJoke() {
-		return $this->jokes[array_rand($this->jokes)];
+
+		$response = $this->client->get(self::API_ENDPOINT);
+
+		$joke = json_decode($response->getBody()->getContents());
+
+		return $joke->value->joke;
 	}
 }
