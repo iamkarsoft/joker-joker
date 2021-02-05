@@ -5,6 +5,8 @@ use Iamkarsoft\JokerJoker\Facades\JokerJoker;
 
 class JokerJokerController {
 	public function __invoke() {
-		return JokerJoker::getRandomJoke();
+		return view('joker-joker::joke', [
+			'joke' => JokerJoker::getRandomJoke(),
+		]);
 	}
 }

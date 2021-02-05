@@ -14,9 +14,18 @@ class JokerJokerServiceProvider extends ServiceProvider {
 			$this->commands([
 				JokerJoke::class,
 			]);
-
-			Route::get('jokerjoker', JokerJokerController::class);
 		}
+
+		// load views
+		$this->loadViewsFrom(__DIR__ . '/../resources/views', 'joker-joker');
+
+		// publish views
+
+		$this->publishes([
+			__DIR__ . '/../resources/views' => resource_path('views/vendor/joker-joker'),
+		]);
+		//routing
+		Route::get('jokes', JokerJokerController::class);
 	}
 
 	public function register() {

@@ -50,7 +50,7 @@ class LaravelTest extends TestCase {
 	 * @test
 	 */
 	public function the_route_can_be_accessed() {
-		$this->get('/jokerjoker')
+		$this->get('/jokes')
 			->assertStatus(200);
 
 	}
